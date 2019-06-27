@@ -9,14 +9,6 @@ var guessesLeft = 9;
 var letterGuessed = [];
 var computerGuess = [];
 
-// Create variables that hold references to the places in the HTML where we want to display things.
-// var directionsText = document.getElementById("directions-text");
-// var userGuessText = document.getElementById("userchoice-text");
-// var computerGuessText = document.getElementById("computerchoice-text");
-// var winsText = document.getElementById("wins-text");
-// var lossesText = document.getElementById("losses-text");
-// var tiesText = document.getElementById("ties-text");
-
 window.onload = function () {
     var compGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
     computerGuess.push(compGuess);
@@ -34,9 +26,7 @@ document.onkeyup = function (event) {
 
     // Randomly chooses a choice from the options array. This is the Computer's guess.
 
-    // Reworked our code from last step to use "else if" instead of lots of if statements.
-
-    // This logic determines the outcome of the game (win/loss/tie), and increments the appropriate number
+    // Wins/Losses
     if ((userGuess === computerGuess[0]) && (guessesLeft > 0)) {
         wins++;
         guessesLeft = 9;
